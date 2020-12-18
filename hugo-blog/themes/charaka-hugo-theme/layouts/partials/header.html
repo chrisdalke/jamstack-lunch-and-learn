@@ -7,13 +7,13 @@
 {{ $scratch.Set "baseURL" .Site.BaseURL }}
 
 <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
-<link href="{{ $scratch.Get "baseURL" }}/unpkg/css/normalize.css" rel="stylesheet" />
-<link href="{{ $scratch.Get "baseURL" }}/unpkg/blueprintjs/blueprint-icons.css" rel="stylesheet" />
-<link href="{{ $scratch.Get "baseURL" }}/unpkg/blueprintjs/blueprint.css" rel="stylesheet" />
+<link href="/unpkg/css/normalize.css" rel="stylesheet" />
+<link href="/unpkg/blueprintjs/blueprint-icons.css" rel="stylesheet" />
+<link href="/unpkg/blueprintjs/blueprint.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="{{ $scratch.Get "baseURL" }}/css/fonts.css">
-<link rel="stylesheet" href="{{ $scratch.Get "baseURL" }}/css/styles.css">
-<link rel="stylesheet" href="{{ $scratch.Get "baseURL" }}/css/style2.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/style2.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
 integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -23,13 +23,13 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="{{ $scratch.Get "baseURL" }}/js/highlight.js"></script>
+<script src="/js/highlight.js"></script>
 {{ end }}
 
 {{ if eq "true" .Site.Params.share.enabled }}
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
-<script type="text/javascript" src="{{ $scratch.Get "baseURL" }}/js/jssocials.js"></script>
+<script type="text/javascript" src="/js/jssocials.js"></script>
 {{ end }}
 
 {{ .Scratch.Delete "baseURL" }}

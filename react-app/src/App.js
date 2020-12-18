@@ -1,13 +1,13 @@
 import './App.scss';
 import Orange from './Orange';
 import { Spinner, Intent, Tag } from '@blueprintjs/core';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Toaster from './Toaster';
 import confetti from 'canvas-confetti';
 
 function App() {
-  const [numFactsLeft, setNumFactsLeft] = useState(5);
-  const [factsArray, setFactsArray] = useState([
+  const [numFactsLeft] = useState(5);
+  const [factsArray] = useState([
     "Oranges are delicious",
     "Oranges are the largest citrus fruit in the world.",
     "Orange juice is the most popular fruit juice in America.",
@@ -35,21 +35,18 @@ function App() {
     message: "",
     num: 0
   });
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading] = useState(false);
 
-  const selectFact = () => {
+  const selectFact = useCallback(() => {
     setFact({
-      message: factsArray.random(),
+      message: factsArray[Math.floor((Math.random()*factsArray.length))],
       num: Math.floor(Math.random() * 1000) + 1
-    })
-  }
-
+    });
+  }, [factsArray]);
+  
   useEffect(() => {
-    setTimeout(function(){
-      selectFact();
-      setLoading(false);
-    }, 1000);
-  }, []);
+    selectFact();
+  }, [selectFact]);
 
   var count = 200;
   var defaults = {
