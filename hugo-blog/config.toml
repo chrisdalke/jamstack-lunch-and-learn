@@ -1,0 +1,4 @@
+baseURL = "https://blog.factsaboutoranges.com/"
+languageCode = "en-us"
+title = "Facts about Oranges Blog"
+theme = "charaka-hugo-theme"
