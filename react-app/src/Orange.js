@@ -1,6 +1,4 @@
-import orange1 from './orange1.png';
 import strawberry1 from './strawberry1.png';
-import orange2 from './orange2.png';
 import './Orange.scss'
 
 function Orange({
