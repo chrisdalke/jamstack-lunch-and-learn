@@ -39,7 +39,7 @@ function App() {
 
   const selectFact = useCallback(() => {
     setFact({
-      message: factsArray.random(),
+      message: factsArray[Math.floor((Math.random()*factsArray.length))],
       num: Math.floor(Math.random() * 1000) + 1
     });
   }, [factsArray]);
