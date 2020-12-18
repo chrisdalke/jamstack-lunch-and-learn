@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 
-Array.prototype.random = function () {
-  return this[Math.floor((Math.random()*this.length))];
-}
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
